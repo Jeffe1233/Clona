@@ -17,6 +17,7 @@ input[type=number],input[type=date],input[type=text], input[type=email], input[t
 		width: 100vh;
 		position: relative;
 		margin: 0;
+		background-attachment: fixed;
 	}
 	
 	form
